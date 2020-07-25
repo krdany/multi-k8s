@@ -19,7 +19,7 @@ before_install:
   - docker build -t krdanny/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true krdanny/react-test npm run test
+  - docker run krdanny/react-test npm test -- --coverage
 
 deploy:
   provider: script
