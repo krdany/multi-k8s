@@ -1,12 +1,12 @@
-docker build -t krdanny/multi-client:latests -t krdanny/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t krdanny/multi-client:latest -t krdanny/multi-client:$SHA -f ./client/Dockerfile ./client
 
-docker build -t krdanny/multi-server:latests -t krdanny/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t krdanny/multi-server:latest -t krdanny/multi-server:$SHA -f ./server/Dockerfile ./server
 
-docker build -t krdanny/multi-worker:latests -t krdanny/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t krdanny/multi-worker:latest -t krdanny/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
-docker push krdanny/multi-client:latests
-docker push krdanny/multi-server:latests
-docker push krdanny/multi-worker:latests
+docker push krdanny/multi-client:latest
+docker push krdanny/multi-server:latest
+docker push krdanny/multi-worker:latest
 
 docker push krdanny/multi-client:$SHA
 docker push krdanny/multi-server:$SHA
